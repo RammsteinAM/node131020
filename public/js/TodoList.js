@@ -15,8 +15,8 @@ export default class TodoList {
         <div class="todo-card" data-id="${todoItem.id}">
             <div class="card-content">${todoItem.text}</div>
             <div class="card-control-container"> 
-            <button data-action="edit" data-id="${todoItem.id}">Edit</button>
-            <button data-action="delete" data-id="${todoItem.id}">Delete</button>
+            <button data-action="edit" data-id="${todoItem.id}" title="Edit"><i class="fa fa-pencil icon"></i></button>
+            <button data-action="delete" data-id="${todoItem.id}" title="Delete"><i class="fa fa-trash-o icon"></i></button>
             </div>
         </div>
         `;
