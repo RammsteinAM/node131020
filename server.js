@@ -12,16 +12,12 @@ const app = express();
 app.set("view engine", "pug");
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-
 app.use(
   express.urlencoded({
     extended: true,
   })
 );
-
-app.use(express.static(__dirname));
 app.use(bodyParser.json());
-
 app.use("/api/todos", todoRoutes);
 
 app.get("/", (req, res) => {
