@@ -100,12 +100,8 @@ class App {
 
   async render() {
     const todoContainer = new TodoContainer();
-    try {
-      root.innerHTML = await todoContainer.render();
-      this.attachListeners();
-    } catch (error) {
-      root.innerHTML = error;
-    }
+    root.innerHTML = await todoContainer.render();
+    this.attachListeners();
   }
 }
 
